@@ -22,6 +22,7 @@ class Solution(object):
                 if st[len(st)-1]>h1[dum[i]]:
                    st[len(st)-1]=st[len(st)-1]-1
                 elif st[len(st)-1]==h1[dum[i]]:
+                    
                     st.pop()
                     st1.pop()
                 else:
