@@ -5,15 +5,15 @@ class Solution(object):
         :type val: int
         :rtype: int
         """
-        c=1
-        nums=sorted(nums)
-        for i in range(1,len(nums)):
-            if nums[i]!=val:
+        c = 0  # Counter for the position to place non-val elements
+        for i in range(len(nums)):
+            if nums[i] != val:
                 nums[c] = nums[i]
-                c+=1
-        return (c)
+                c += 1
+        # After the loop, nums[:c] contains all elements except val
+        return c
         
         
 
 s=Solution()
-print(s.removeElement(nums = [3,2,2,3], val = 3))
+print(s.removeElement(nums = [0,1,2,2,3,0,4,2], val = 2))
