@@ -4,42 +4,50 @@ class Solution(object):
         :type board: List[List[str]]
         :rtype: bool
         """
-        dum=[[0 for _ in range(0,9)]for _ in range(0,9)]
-        hr={}
-        hc={}
+        col={}
+        row={}
+        h1={}
+        h2={}
+        h3={}
+        for i in range(0,9):
+            for j in range(9-1,-1,-1):
+                if board[j][i] in col:
+                    return False
+                elif board[j][i] !=".":
+                    col[board[j][i]]=0 
+            col={}
         for i in range(0,9):
             for j in range(0,9):
-                if board[i][j] not in hr or board[i][j]==".":
-                    hr[board[i][j]]=1
+                if j<3:
+                    if board[i][j] in h1:
+                        return False
+                    elif board[i][j] !=".":
+                       h1[board[i][j]]=0
+                elif j<6:
+                    if board[i][j] in h2:
+                        return False
+                    elif board[i][j] !=".":
+                       h2[board[i][j]]=0
                 else:
-                    print(board[i][j])
+                    if board[i][j] in h3:
+                        return False
+                    elif board[i][j] !=".":
+                       h3[board[i][j]]=0
+                if board[i][j] in row:
                     return False
-                if board[j][i] not in hc or board[j][i]==".":
-                    hc[board[j][i]]=1
-                else:
-                    return False
-            hr={}
-            hc={}
-        for i in (0, 3, 6):
-         for j in (0, 3, 6):
-            square = [board[x][y] for x in range(i, i + 3) for y in range(j, j + 3)]
-            if not self.is_unit_valid(square):
-                return False
+                elif board[i][j] !=".":
+                    row[board[i][j]]=0 
+            if i==2:
+                h1={}
+                h2={}
+                h3={}
+            if i==5:
+                h1={}
+                h2={}
+                h3={}
+            
+            row={}
         return True
-        
-    def is_unit_valid(self, unit):
-        unit = [i for i in unit if i != '.']
-        return len(set(unit)) == len(unit)
-        
 
 s=Solution()
-print(s.isValidSudoku( board = 
-[["5","3",".",".","7",".",".",".","."]
-,["6",".",".","1","9","5",".",".","."]
-,[".","5","8",".",".",".",".","6","."]
-,["8",".",".",".","6",".",".",".","3"]
-,["4",".",".","8",".","3",".",".","1"]
-,["7",".",".",".","2",".",".",".","6"]
-,[".","6",".",".",".",".","2","8","."]
-,[".",".",".","4","1","9",".",".","5"]
-,[".",".",".",".","8",".",".","7","9"]]))
+print(s.isValidSudoku( board = [[".",".","4",".",".",".","6","3","."],[".",".",".",".",".",".",".",".","."],["5",".",".",".",".",".",".","9","."],[".",".",".","5","6",".",".",".","."],["4",".","3",".",".",".",".",".","1"],[".",".",".","7",".",".",".",".","."],[".",".",".","5",".",".",".",".","."],[".",".",".",".",".",".",".",".","."],[".",".",".",".",".",".",".",".","."]]))
