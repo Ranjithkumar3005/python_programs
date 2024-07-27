@@ -18,12 +18,15 @@ class Solution(object):
             return arr
         final=[]
         dum=nums
+        h={}
         n=math.factorial(len(nums))
         for i in range(0,n):
             dum=arras(dum[::])
-            final.append(dum)
+            if str(dum) not in h:
+              final.append(dum)
+              h[str(dum)]=0
         
         print(final)
 
 s=Solution()
-s.permute(nums = [0,1])
+s.permute(nums = [1,1,2])
