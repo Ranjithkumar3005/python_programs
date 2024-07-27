@@ -25,4 +25,4 @@ class Solution(object):
         
 
 s=Solution()
-s.nextPermutation( nums = [1,2,3])
+print(s.nextPermutation( nums = [1,2,3]))
