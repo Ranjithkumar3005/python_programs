@@ -9,7 +9,6 @@ class Solution(object):
         k%=len(nums)
         c=0
         for i in range(0,len(nums)):
-
             if i+k>=len(nums):
                 dum[c]=nums[i]
                 c+=1
