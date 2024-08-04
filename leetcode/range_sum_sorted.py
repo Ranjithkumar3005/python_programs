@@ -17,11 +17,17 @@ class Solution(object):
             for j in range(i+1,len(nums)):
                 if check:
                   dum.append(sum+nums[j])
+                  sum1+=nums[j]
                   check=False
-                sum1+=nums[j]
-                dum.append(sum1)
-        print(sorted(dum))
+                else:
+                  sum1+=nums[j]
+                  dum.append(sum1)
+        dum=sorted(dum)
+        sum=0
+        for i in range(left-1,right):
+          sum+=dum[i]
         
+        print(sum)
 
 s=Solution()
-s.rangeSum(nums = [1,2,3,4], n = 4, left = 1, right = 5)
+s.rangeSum(nums = [1,2,3,4], n = 4, left = 1, right = 10)
