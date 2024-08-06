@@ -12,6 +12,7 @@ class Solution(object):
             else:
                 h[i]=1
         so = sorted(h.items(), key=lambda x: x[1], reverse=True)
+        print(so)
         dum=[]
         for i in range(0,k):
             dum.append(so[i][0])
