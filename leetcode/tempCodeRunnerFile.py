@@ -1,3 +1,1 @@
-if int(val)>(2**63)-1:
-            #     print("h")
-            #     return -1
+print(s.addNegabinary([1, 1, 1, 1, 1], [1, 0, 1]))  # Output: [1, 0, 0, 0, 0]
