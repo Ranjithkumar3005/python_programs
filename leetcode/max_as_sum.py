@@ -4,18 +4,21 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        sum=0
-        tot=nums[0]
-        for i in range(0,len(nums)-1):
-            if nums[i]<=nums[i+1]:
-                tot+=nums[i+1]
+        if len(nums) == 1:
+            return nums[0]
+
+        max_sum = current_sum = nums[0]
+
+        for i in range(1, len(nums)):
+            if nums[i] > nums[i - 1]:
+                current_sum += nums[i]
             else:
-                sum=max(sum,tot)
-                tot=nums[i]
-                
-        print(sum)
-        
-        
-        
-s=Solution()
-s.maxAscendingSum(nums = [10,20,30,5,10,50])
+                max_sum = max(max_sum, current_sum)
+                current_sum = nums[i]
+
+        max_sum = max(max_sum, current_sum)
+        return max_sum
+
+# Example usage:
+s = Solution()
+print(s.maxAscendingSum(nums = [20, 10]))  # Output: 20
