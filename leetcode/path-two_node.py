@@ -10,11 +10,11 @@ class Solution(object):
                 return True
             for i in nums[val]:
                 if i not in visited:
-                    queue.append(val)
-                    visited.add(val)
+                    queue.append(i)
+                    visited.add(i)
         return False
                     
         
 
 s=Solution()
-print(s.path_two_nodes(nums= {0: [1, 2],1: [0, 3, 4],2: [0, 4],3: [1],4: [1, 2]},s=0,e=2))
+print(s.path_two_nodes(nums= {0: [1, 2],1: [0, 3, 4],2: [0, 4],3: [1],4: [1, 2]},s=0,e=3))
