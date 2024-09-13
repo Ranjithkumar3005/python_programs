@@ -6,7 +6,6 @@ class Solution(object):
         """
         st=[nums[0]]
         i=1
-
         c=0
         while True:
             check=True
@@ -18,15 +17,15 @@ class Solution(object):
                 else:
                     st.append(nums[i])
                     lastele=nums[i]
-            c+=1
             if check:
                 break
+            c+=1
             nums=st[:]
-            st=[]
+            st=[nums[0]]
         print(c)
                     
         
         
 
 s=Solution()
-s.totalSteps(nums = [5,3,4,4,7,3,6,11,8,5,11])
+s.totalSteps(nums = [4,5,7,7,13])
