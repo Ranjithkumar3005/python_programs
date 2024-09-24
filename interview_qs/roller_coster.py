@@ -4,13 +4,16 @@ def check(nums, n):
         h[nums[i]] = i
     swaps = 0
 
-    for i in range(len(nums)):
-        if nums[i] != i + 1:
-            tem = nums[i]
-            nums[i] = i + 1
-            nums[h[i + 1]] = tem
+    for i in range(n):
+        correct_value = i + 1
+        if nums[i] != correct_value:
+            correct_index = h[correct_value]
+            nums[i], nums[correct_index] = nums[correct_index], nums[i]
+            h[nums[correct_index]] = correct_index
+            h[nums[i]] = i
+
             swaps += 1
-    print(nums)
+    print(h, nums)
     print(swaps)
 
 
