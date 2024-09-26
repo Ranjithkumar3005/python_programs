@@ -1,0 +1,23 @@
+import math
+
+def min_smoke(N, X, Y):
+    buses = N // 100
+    remaining_people = N % 100
+    cars = math.ceil(remaining_people / 4)
+    smoke_case1 = buses * X + cars * Y
+    
+    cars_only = math.ceil(N / 4)
+    smoke_case2 = cars_only * Y
+    
+    bus_only = math.ceil(N / 100)
+    smoke_case3 = bus_only * X
+    
+     
+    
+    return min(smoke_case1, smoke_case2, smoke_case3)
+
+T = int(input())  # Number of test cases
+for _ in range(T):
+    N, X, Y = map(int, input().split())
+    result = min_smoke(N, X, Y)
+    print(result)
