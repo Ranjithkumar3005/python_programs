@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def findPairs(self, nums, k):
-        if not nums:  # Check for empty input
+        if not nums:
             return 0
 
         h = {}
