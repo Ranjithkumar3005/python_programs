@@ -7,7 +7,6 @@ class Solution(object):
         n = len(pattern)
         result = []
         stack = []
-
         for i in range(1, n + 2):
             stack.append(str(i))
             if i == n + 1 or pattern[i - 1] == "I":
