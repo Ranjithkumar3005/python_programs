@@ -6,6 +6,7 @@ class Solution(object):
         :rtype: int
         """
         h = {}
+
         maxlength = 0
         for i in arr:
             val = i - difference
