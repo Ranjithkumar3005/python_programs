@@ -4,9 +4,7 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        h={}
-        h1={}
-        if len(s)==0:
+        h={}        if len(s)==0:
             return 0
         for i in range(0,len(s)):
             c=0
