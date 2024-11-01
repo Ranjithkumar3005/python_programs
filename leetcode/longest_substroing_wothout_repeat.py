@@ -4,20 +4,22 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        h={}        if len(s)==0:
+        h = {}
+        if len(s) == 0:
             return 0
-        for i in range(0,len(s)):
-            c=0
-            for j in range(i,len(s)):
+        for i in range(0, len(s)):
+            c = 0
+            for j in range(i, len(s)):
                 if s[j] not in h:
-                    c+=1
-                    h[s[j]]=1
+                    c += 1
+                    h[s[j]] = 1
                 else:
                     break
-            h1[i]=c
-            h={}
-        maxi=max(h1.values())
+            h1[i] = c
+            h = {}
+        maxi = max(h1.values())
         return maxi
-        
-s=Solution()
-print(s.lengthOfLongestSubstring(s = "a"))
+
+
+s = Solution()
+print(s.lengthOfLongestSubstring(s="a"))
