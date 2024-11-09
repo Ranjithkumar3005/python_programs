@@ -14,6 +14,7 @@ class Solution:
         dum = sorted(dum, reverse=True)
         op = 0
         i = 0
+
         while diff > 0:
             if i == len(dum):
                 return -1
