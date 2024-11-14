@@ -9,7 +9,7 @@ class Solution:
             num[start : end + 1] = segment
 
         i = 0
-        while i <n:
+        while i < n:
             j = i
             # Find the end of the current parity segment1
             while j + 1 < n and (int(num[j]) % 2 == int(num[j + 1]) % 2):
