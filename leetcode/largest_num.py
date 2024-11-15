@@ -14,7 +14,6 @@ class Solution:
             # Find the end of the current parity segment1
             while j + 1 < n and (int(num[j]) % 2 == int(num[j + 1]) % 2):
                 j += 1
-
             # Sort this segment in descending order
             sort_segment(i, j)
 
