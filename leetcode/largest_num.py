@@ -2,7 +2,6 @@ class Solution:
     def largestNumber(self, num):
         num = list(num)  # Convert to a list for easy manipulation
         n = len(num)
-
         # Helper function to sort a segment in descending order
         def sort_segment(start, end):
             segment = sorted(num[start : end + 1], reverse=True)
