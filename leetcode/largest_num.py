@@ -2,6 +2,7 @@ class Solution:
     def largestNumber(self, num):
         num = list(num)  # Convert to a list for easy manipulation
         n = len(num)
+
         # Helper function to sort a segment in descending order
         def sort_segment(start, end):
             segment = sorted(num[start : end + 1], reverse=True)
@@ -10,7 +11,6 @@ class Solution:
         i = 0
         while i < n:
             j = i
-            # Find the end of the current parity segment1
             while j + 1 < n and (int(num[j]) % 2 == int(num[j + 1]) % 2):
                 j += 1
             # Sort this segment in descending order
