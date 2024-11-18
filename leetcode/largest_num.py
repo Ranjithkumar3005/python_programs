@@ -16,7 +16,6 @@ class Solution:
             # Sort this segment in descending order
             sort_segment(i, j)
 
-            # Move to the next segment
             i = j + 1
 
         return "".join(num)
