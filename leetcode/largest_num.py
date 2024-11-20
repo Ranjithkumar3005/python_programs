@@ -7,7 +7,6 @@ class Solution:
         def sort_segment(start, end):
             segment = sorted(num[start : end + 1], reverse=True)
             num[start : end + 1] = segment
-
         i = 0
         while i < n:
             j = i
