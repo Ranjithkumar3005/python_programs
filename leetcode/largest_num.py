@@ -13,11 +13,8 @@ class Solution:
             while j + 1 < n and (int(num[j]) % 2 == int(num[j + 1]) % 2):
                 j += 1
             sort_segment(i, j)
-
             i = j + 1
-
         return "".join(num)
-
 
 # Example Usage:
 sol = Solution()
