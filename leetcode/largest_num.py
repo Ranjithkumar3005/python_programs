@@ -7,6 +7,7 @@ class Solution:
         def sort_segment(start, end):
             segment = sorted(num[start : end + 1], reverse=True)
             num[start : end + 1] = segment
+
         i = 0
         while i < n:
             j = i
@@ -16,6 +17,7 @@ class Solution:
             i = j + 1
         return "".join(num)
 
+
 # Example Usage:
 sol = Solution()
-print(sol.largestNumber("7596801"))  # Expected output: "9876501"
+print(sol.largestNumber("7596801"))
