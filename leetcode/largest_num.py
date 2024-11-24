@@ -18,6 +18,3 @@ class Solution:
         return "".join(num)
 
 
-# Example Usage:
-sol = Solution()
-print(sol.largestNumber("7596801"))
