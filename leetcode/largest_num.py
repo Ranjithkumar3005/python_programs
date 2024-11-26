@@ -1,6 +1,6 @@
 class Solution:
     def largestNumber(self, num):
-        num = list(num)  # Convert to a list for easy manipulation
+        num = list(num) 
         n = len(num)
 
         def sort_segment(start, end):
