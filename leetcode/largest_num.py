@@ -1,6 +1,6 @@
 class Solution:
     def largestNumber(self, num):
-        num = list(num) 
+        num = list(num)
         n = len(num)
 
         def sort_segment(start, end):
@@ -15,3 +15,9 @@ class Solution:
             sort_segment(i, j)
             i = j + 1
         return "".join(num)
+
+
+#
+
+s = Solution()
+s.largestNumber([10, 2, 20, 4, 5, 6])
