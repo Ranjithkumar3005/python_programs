@@ -16,6 +16,3 @@ class Solution:
             i = j + 1
         return "".join(num)
 
-
-s = Solution()
-s.largestNumber([10, 2, 20, 4, 5, 6])
