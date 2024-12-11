@@ -16,5 +16,3 @@ class Solution:
             i = j + 1
         return "".join(num)
 
-
-#
