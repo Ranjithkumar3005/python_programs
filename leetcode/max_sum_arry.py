@@ -8,5 +8,5 @@ def maxSum(arr, k):
         left += 1
     return max1
 
-#
+
 print(maxSum(arr=[1, 2, 3, 4, 5], k=3))
