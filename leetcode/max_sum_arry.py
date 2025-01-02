@@ -9,3 +9,4 @@ def maxSum(arr, k):
     return max1
 
 print(maxSum(arr=[1, 2, 3, 4, 5], k=3))
+#
