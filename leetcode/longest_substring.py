@@ -22,6 +22,3 @@ class Solution(object):
     
         print(dummy)
         
-        
-s=Solution()
-s.lengthOfLongestSubstring( "dvdf")
