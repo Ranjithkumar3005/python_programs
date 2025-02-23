@@ -18,4 +18,3 @@ class Solution(object):
             else:
                 count = 1
                 dummycharacter += " " + s[i]
-        print(dummy)
