@@ -4,21 +4,18 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        count=0
-        dummy=0
-        dummycharacter=''
-        for i in range(0,len(s)):
-            if  s[i] not in dummycharacter:
-                count+=1
+        count = 0
+        dummy = 0
+        dummycharacter = ""
+        for i in range(0, len(s)):
+            if s[i] not in dummycharacter:
+                count += 1
                 print(count)
-                dummycharacter+=" "+s[i]
+                dummycharacter += " " + s[i]
                 print(dummycharacter)
-                if dummy<count:
-                    dummy=count
-                    
+                if dummy < count:
+                    dummy = count
             else:
-                count=1
-                dummycharacter+=" "+s[i]
-    
+                count = 1
+                dummycharacter += " " + s[i]
         print(dummy)
-        
